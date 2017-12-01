@@ -1,4 +1,3 @@
-
 struct stepperInfo {
   // externally defined parameters
   float acceleration;
@@ -308,11 +307,4 @@ void loop() {
   while (true);
 
 }
-
-
-
-
-
-
-
 

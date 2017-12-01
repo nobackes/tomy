@@ -1,5 +1,4 @@
-
-#define X_DIR_PIN          55
+define X_DIR_PIN          55
 #define X_STEP_PIN         54
 #define X_ENABLE_PIN       38
 
@@ -28,32 +27,21 @@ void setup() {
   // put your setup code here, to run once:
 
   stepperSetup();
-  
+  Serial.begin(9600);  
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-  for (int i = 0; i < NUM_STEPPERS; i++) {
-    prepareMovement( i, 800 );
-    runAndWait();
-  }
-
-  prepareMovement( 0, 8000 );
-  prepareMovement( 1,  800 );
+  
   prepareMovement( 2, 2400 );
   
   runAndWait();
 
-  delay(1000);
-
-  prepareMovement( 0, -8000 );
-  prepareMovement( 1,  1600 );
-  prepareMovement( 2, -2400 );
-  
-  runAndWait();
-
-  while (true);
   
 }
+
+
+
+
